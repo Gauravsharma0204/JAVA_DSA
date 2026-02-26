@@ -1,0 +1,22 @@
+package _10_Math_for_DSA;
+
+public class LCM {
+    public static void main(String[] args) {
+        int a = 30;
+        int b = 18;
+
+        int gcd = findGCD(a, b);
+        int lcm = (a * b) / gcd;
+
+        System.out.println("LCM of " + a + " and " + b + " is: " + lcm);
+    }
+
+    public static int findGCD(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+}
